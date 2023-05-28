@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="container max-w-[800px]">
       <h1>Mulyana, Frontend Developer</h1>
-      {posts.map((post) => <Link href={`post/${post.slug}`}>{post.title}</Link>)}
+      {posts.map((post) => <Link key={post.slug} href={`post/${post.slug}`}>{post.title}</Link>)}
     </div>    
   )
 }
