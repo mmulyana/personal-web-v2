@@ -2,6 +2,8 @@ import fs from 'fs'
 import Markdown from 'markdown-to-jsx'
 import matter from 'gray-matter'
 import { formatDate, getPostMetadata } from '@/utils'
+import Link from 'next/link'
+import { BiChevronLeft } from 'react-icons/bi'
 
 const getPostContent = (slug: string) => {
   const folder = 'posts/'
@@ -23,7 +25,15 @@ const PostPage = (props: any) => {
   const post = getPostContent(slug)
   return (
     <div className='mt-12'>
-      <h1 className='text-2xl text-white font-semibold capitalize'>{post.data.title}</h1>
+      <Link
+        className='h-7 w-7 flex items-center justify-center rounded-md text-2xl text-white/80 bg-[#21212C]'
+        href='/'
+      >
+        <BiChevronLeft />
+      </Link>
+      <h1 className='mt-8 text-2xl text-white font-semibold capitalize'>
+        {post.data.title}
+      </h1>
       <p className='mt-2 text-white/80 text-sm'>{formatDate(post.data.date)}</p>
 
       <article className='prose prose-invert'>
