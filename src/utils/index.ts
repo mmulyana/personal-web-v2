@@ -1,6 +1,17 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 import { posts } from '../models/posts'
+import reactIcon from 'public/icon/react.svg'
+import typescriptIcon from 'public/icon/typescript.svg'
+import nextIcon from 'public/icon/next.svg'
+import gitIcon from 'public/icon/git.svg'
+import figmaIcon from 'public/icon/figma.svg'
+import nodeIcon from 'public/icon/node.svg'
+import rtlIcon from 'public/icon/rtl.png'
+import tailwindIcon from 'public/icon/tailwind.svg'
+import reduxIcon from 'public/icon/redux.svg'
+import graphqlIcon from 'public/icon/graphql.svg'
+import jsIcon from 'public/icon/js.svg'
 
 function getPostMetadata(): posts[] {
   const folder = 'posts/'
@@ -22,4 +33,19 @@ function getPostMetadata(): posts[] {
   return posts
 }
 
-export { getPostMetadata }
+const skills = [
+  { icon: reactIcon, title: 'react'},
+  { icon: nextIcon, title: 'next.js' },
+  { icon: tailwindIcon, title: 'tailwind' },
+  { icon: reduxIcon, title: 'redux' },
+  { icon: graphqlIcon, title: 'grapql' },
+  { icon: jsIcon, title: 'javascript' },
+  { icon: typescriptIcon, title: 'typescript' },
+  { icon: rtlIcon, title: 'react testing library' },
+  { icon: nodeIcon, title: 'node.js' },
+  { icon: figmaIcon, title: 'figma' },
+  { icon: gitIcon, title: 'git' },
+]
+
+
+export { getPostMetadata, skills }

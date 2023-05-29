@@ -1,44 +1,39 @@
-import LinkSocial from '@/component/LinkSocial'
-import Signal from '@/component/Signal'
-import { getPostMetadata } from '@/utils'
-import { BsGithub, BsTwitter, BsLinkedin } from 'react-icons/bs'
+import Skill from '@/component/Skill'
+import TopHeadline from '@/component/molecules/TopHeadline'
+import { getPostMetadata, skills } from '@/utils'
+import Image from 'next/image'
 
 export default function Home() {
   const posts = getPostMetadata()
   return (
-    <div className='mt-14 md:mt-24'>
-      <TopHeadline />
-      <h1 className='text-[56px] text-white mt-6 leading-[80px]'>
-        Mulyana, <br />
-        <span className='text-white/40'>a Frontend Developer</span>
-      </h1>
-      <p className='text-white/80 max-w-[610px] mt-6 text-sm'>
-        Junior front-end developer based in Indonesia specializing in crafting
-        highly responsive and visually appealing user interfaces for seamless
-        user experiences.
-      </p>
-    </div>
-  )
-}
+    <>
+      <section className='mt-10'>
+        <TopHeadline />
+        <h1 className='text-3xl md:text-[56px] text-white mt-6 leading-10 md:leading-[80px]'>
+          Mulyana, <br />a{' '}
+          <span className='text-white/40'>Frontend Developer</span>
+        </h1>
+        <p className='text-white/80 max-w-[610px] mt-6 text-sm'>
+          Junior front-end developer based in Indonesia specializing in crafting
+          highly responsive and visually appealing user interfaces for seamless
+          user experiences.
+        </p>
+      </section>
 
-function TopHeadline() {
-  return (
-    <div className='flex items-center justify-between'>
-      <Signal text='Available for internship' type='primary' ping />
-      <div className='flex items-center gap-4'>
-        <LinkSocial href='https://twitter.com/_mulll__'>
-          <BsTwitter />
-        </LinkSocial>
-        <LinkSocial
-          href='https://www.linkedin.com/in/mmulyana/'
-          styleChild='text-sm'
-        >
-          <BsLinkedin />
-        </LinkSocial>
-        <LinkSocial href='https://github.com/mmulyana'>
-          <BsGithub />
-        </LinkSocial>
-      </div>
-    </div>
+      <section className='mt-10 md:mt-20'>
+        <h4 className='text-white'>Featured Project</h4>
+      </section>
+
+      <section className='mt-10 md:mt-20'>
+        <h4 className='text-white'>Stack</h4>
+        <div className='mt-4 flex gap-8 items-center flex-wrap'>
+          {skills.map((skill, index) => (
+            <Skill key={index}>
+              <Image src={skill.icon} alt={skill.title} className='w-6 h-fit object-contain'/>
+            </Skill>
+          ))}
+        </div>
+      </section>
+    </>
   )
 }
