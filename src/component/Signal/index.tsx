@@ -4,11 +4,12 @@ import configs from './configs'
 type Props = {
   type: string
   text: string
+  ping?: boolean
 }
 
-export default function Signal({ type, text }: Props) {
+export default function Signal({ type, text, ping }: Props) {
   const styleBg = [
-    'w-5 h-5 rounded-full flex items-center justify-center',
+    'w-5 h-5 rounded-full flex items-center justify-center relative',
     type === 'primary' ? configs.bg.primary : '',
   ].join(' ')
 
@@ -22,6 +23,14 @@ export default function Signal({ type, text }: Props) {
     <div className='flex gap-4 items-center'>
       <div className={styleBg}>
         <div className={styleDotted}></div>
+        {!!ping && (
+          <div
+            className={[
+              'h-[10px] w-[10px] rounded-full absolute animate-ping',
+              type === 'primary' ? configs.color.primary : '',
+            ].join(' ')}
+          ></div>
+        )}
       </div>
       <p className='text-white/90 text-sm'>{text}</p>
     </div>
