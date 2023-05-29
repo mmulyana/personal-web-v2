@@ -34,7 +34,7 @@ function getPostMetadata(): posts[] {
 }
 
 const skills = [
-  { icon: reactIcon, title: 'react'},
+  { icon: reactIcon, title: 'react' },
   { icon: nextIcon, title: 'next.js' },
   { icon: tailwindIcon, title: 'tailwind' },
   { icon: reduxIcon, title: 'redux' },
@@ -47,5 +47,18 @@ const skills = [
   { icon: gitIcon, title: 'git' },
 ]
 
+function formatDate(dateString: string) {
+  let date = dateString.split('-')
+  let year = date[0]
+  let month = date[1]
+  let day = date[2]
 
-export { getPostMetadata, skills }
+  let months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]
+
+  let monthName = months[parseInt(month) - 1]
+
+  let formattedDate = `${monthName} ${day}, ${year}`
+  return formattedDate
+}
+
+export { getPostMetadata, skills, formatDate }

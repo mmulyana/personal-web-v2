@@ -1,7 +1,8 @@
 import { linksI } from '@/models'
-import LinkSocial from '../LinkSocial'
-import Signal from '../Signal'
+import LinkSocial from '../atoms/LinkSocial'
+import Signal from '../atoms/Signal'
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs'
+import { MdEmail } from 'react-icons/md'
 
 export default function TopHeadline() {
   return (
@@ -31,4 +32,8 @@ const links: linksI[] = [
     href: 'https://github.com/mmulyana',
     icon: <BsGithub />,
   },
+  {
+    href: 'mailto:mulyan.t20@gmail.com',
+    icon: <MdEmail/>
+  }
 ]

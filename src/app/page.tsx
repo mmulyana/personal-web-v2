@@ -1,4 +1,5 @@
-import Skill from '@/component/Skill'
+import Blogs from '@/component/atoms/Blogs'
+import Skill from '@/component/atoms/Skill'
 import TopHeadline from '@/component/molecules/TopHeadline'
 import { getPostMetadata, skills } from '@/utils'
 import Image from 'next/image'
@@ -29,9 +30,20 @@ export default function Home() {
         <div className='mt-4 flex gap-8 items-center flex-wrap'>
           {skills.map((skill, index) => (
             <Skill key={index}>
-              <Image src={skill.icon} alt={skill.title} className='w-6 h-fit object-contain'/>
+              <Image
+                src={skill.icon}
+                alt={skill.title}
+                className='w-6 h-fit object-contain'
+              />
             </Skill>
           ))}
+        </div>
+      </section>
+
+      <section className='mt-10 md:mt-20'>
+        <h4 className='text-white'>Writing</h4>
+        <div className='mt-4'>
+          <Blogs posts={posts} />
         </div>
       </section>
     </>

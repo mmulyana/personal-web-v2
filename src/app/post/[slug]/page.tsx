@@ -1,7 +1,7 @@
 import fs from 'fs'
 import Markdown from 'markdown-to-jsx'
 import matter from 'gray-matter'
-import { getPostMetadata } from '@/utils'
+import { formatDate, getPostMetadata } from '@/utils'
 
 const getPostContent = (slug: string) => {
   const folder = 'posts/'
@@ -22,11 +22,11 @@ const PostPage = (props: any) => {
   const slug = props.params.slug
   const post = getPostContent(slug)
   return (
-    <div className='container max-w-[800px]'>
-      <h1 className='text-2xl '>{post.data.title}</h1>
-      <p className='mt-2'>{post.data.date}</p>
+    <div className='mt-12'>
+      <h1 className='text-2xl text-white font-semibold capitalize'>{post.data.title}</h1>
+      <p className='mt-2 text-white/80 text-sm'>{formatDate(post.data.date)}</p>
 
-      <article className='prose'>
+      <article className='prose prose-invert'>
         <Markdown>{post.content}</Markdown>
       </article>
     </div>
