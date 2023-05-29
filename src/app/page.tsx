@@ -27,7 +27,7 @@ export default function Home() {
 
       <section className='mt-10 md:mt-20'>
         <h4 className='text-white'>Stack</h4>
-        <div className='mt-4 flex gap-8 items-center flex-wrap justify-between'>
+        <div className='mt-4 flex gap-8 items-center flex-wrap justify-between md:justify-start'>
           {skills.map((skill, index) => (
             <Skill key={index}>
               <Image
