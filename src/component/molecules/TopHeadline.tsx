@@ -9,8 +9,8 @@ export default function TopHeadline() {
     <div className='flex items-center justify-between'>
       <Signal text='Available for internship' type='primary' ping />
       <div className='flex items-center gap-4'>
-        {links.map((link) => (
-          <LinkSocial href={link.href}>
+        {links.map((link, index) => (
+          <LinkSocial key={index} href={link.href}>
             <>{link.icon}</>
           </LinkSocial>
         ))}
