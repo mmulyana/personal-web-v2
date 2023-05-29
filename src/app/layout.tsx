@@ -15,7 +15,7 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={['container max-w-[800px]',inter.className].join(' ')}>{children}</body>
     </html>
   )
 }
