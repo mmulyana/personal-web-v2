@@ -1,4 +1,5 @@
 import Blogs from '@/component/atoms/Blogs'
+import FeaturedProject from '@/component/atoms/Project/FeaturedProject'
 import Skill from '@/component/atoms/Skill'
 import TopHeadline from '@/component/molecules/TopHeadline'
 import { getPostMetadata, getProjectMetadata, skills } from '@/utils'
@@ -28,19 +29,7 @@ export default function Home() {
       <section className='mt-10 md:mt-20'>
         <h4 className='text-white'>Featured Project</h4>
         <div className='mt-5 grid grid-cols-1 md:grid-cols-2 gap-5'>
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className='project'
-            >
-              <div className='project__layer' />
-              <img src={project.thumbnail} className='project__thumbnail'/>
-              
-              <div className='project__desc'>
-                {project.title}
-              </div>
-            </div>
-          ))}
+          <FeaturedProject projects={projects}/>
         </div>
       </section>
 

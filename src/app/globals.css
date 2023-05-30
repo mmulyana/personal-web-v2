@@ -30,4 +30,11 @@
   .project:hover .project__layer {
     @apply bg-transparent
   }
+
+  .project-left {
+    @apply rounded-r-none;
+  }
+  .project-right {
+    @apply rounded-r-none;
+  }
 }
