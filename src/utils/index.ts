@@ -53,6 +53,9 @@ function getProjectMetadata(): project[] {
       thumbnail: matterResult.data.thumbnail,
       stack: matterResult.data.stack,
       isFeatured: matterResult.data.isFeatured,
+      status: matterResult.data.status,
+      href: matterResult.data.href,
+      repo: matterResult.data.repo
     }
   })
 

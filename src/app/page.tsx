@@ -5,11 +5,12 @@ import TopHeadline from '@/component/molecules/TopHeadline'
 import { getPostMetadata, getProjectMetadata, skills } from '@/utils'
 import Image from 'next/image'
 import GetInTouch from '@/component/molecules/GetInTouch'
+import Link from 'next/link'
+import LatestProject from '@/component/molecules/Project/LatestProject'
 
 export default function Home() {
   const posts = getPostMetadata()
   const projects = getProjectMetadata()
-
   return (
     <>
       <section className='mt-10'>
@@ -28,12 +29,19 @@ export default function Home() {
       <section className='mt-10 md:mt-20'>
         <h4 className='text-white'>Featured Project</h4>
         <div className='mt-5 grid grid-cols-1 md:grid-cols-2 gap-5'>
-          <FeaturedProject projects={projects} />
+          <FeaturedProject
+            projects={projects.filter((project) => project.isFeatured === true)}
+          />
         </div>
       </section>
 
       <section className='mt-10 md:mt-20'>
         <h4 className='text-white'>Latest Project</h4>
+        <div className='mt-5 flex flex-col gap-3'>
+          <LatestProject
+            projects={projects.filter((p) => p.isFeatured === false)}
+          />
+        </div>
       </section>
 
       <section className='mt-10 md:mt-20'>

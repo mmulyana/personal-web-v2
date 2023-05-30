@@ -5,9 +5,9 @@ export interface project {
   endDate: string
   slug: string
   thumbnail?: string
-  stack?: {
-    title: string
-    image: string
-  }[],
+  stack: string
   isFeatured: boolean
+  status: string
+  href: string
+  repo: string
 }

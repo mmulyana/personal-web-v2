@@ -13,7 +13,7 @@
     @apply hover:bg-[#4E4EE9];
   }
   .project__desc {
-    @apply absolute z-10 left-6 bottom-6 bg-[#313141] rounded-md h-14 px-6 text-white flex items-center;
+    @apply absolute z-10 left-6 bottom-6 bg-[#313141] rounded-md h-14 px-6 text-white flex items-center font-medium;
   }
   .project:hover .project__desc {
     @apply text-[#1C1C25] bg-white shadow-lg;
@@ -28,13 +28,34 @@
     @apply h-full w-full bg-[#21212C]/50 absolute z-10 duration-75 ease-in;
   }
   .project:hover .project__layer {
-    @apply bg-transparent
+    @apply bg-transparent;
   }
 
-  .project-left {
-    @apply rounded-r-none;
+  .latest-project {
+    @apply bg-[#21212C] w-full h-28 rounded-lg overflow-hidden flex gap-4 border-2 border-[#21212C] hover:border-[#4E4EE9];
   }
-  .project-right {
-    @apply rounded-r-none;
+
+  .latest-project__image {
+    @apply relative w-[246px] h-full;
+  }
+
+  .latest-project:hover .latest-project__image {
+    @apply bg-[#4E4EE9];
+  }
+
+  .latest-project__image__layer {
+    @apply absolute z-10 top-0 left-0 w-full h-full bg-[#21212C]/60 duration-75 ease-in;
+  }
+
+  .latest-project:hover .latest-project__image .latest-project__image__layer {
+    @apply bg-transparent;
+  }
+
+  .latest-project__image__src {
+    @apply absolute top-10 left-1/2 -translate-x-1/2 rounded-md w-[80%] duration-150 ease-in;
+  }
+
+  .latest-project:hover .latest-project__image .latest-project__image__src {
+    @apply top-6;
   }
 }

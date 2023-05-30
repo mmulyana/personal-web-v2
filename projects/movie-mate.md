@@ -4,18 +4,11 @@ subtitle: 'browse and search for movies, view movie details, and save favorite m
 startDate: '2022-12-15'
 endDate: '2023-03-21'
 thumbnail: 'https://raw.githubusercontent.com/mmulyana/mmulyana.github.io/master/public/thumbnail/movie-mate.png'
-stack:
-  [
-    {
-      title: 'next.js',
-      image: 'https://raw.githubusercontent.com/mmulyana/mmulyana.github.io/8bae7ef542a5a7f9df021b0c282ee80880cb97ee/public/icon/next.svg',
-    },
-    {
-      title: 'next.js',
-      image: 'https://raw.githubusercontent.com/mmulyana/mmulyana.github.io/master/public/icon/typescript.svg',
-    },
-  ]
+stack: 'typescript_next-js_framer'
 isFeatured: true
+status: 'published'
+href: 'https://movie-mate-v1.vercel.app'
+repo: 'https://github.com/mmulyana/movie-mate'
 ---
 
 Hello world 🥳
