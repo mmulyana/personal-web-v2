@@ -1,9 +1,10 @@
-import Blogs from '@/component/atoms/Blogs'
-import FeaturedProject from '@/component/atoms/Project/FeaturedProject'
+import Blogs from '@/component/molecules/Blogs'
+import FeaturedProject from '@/component/molecules/Project/FeaturedProject'
 import Skill from '@/component/atoms/Skill'
 import TopHeadline from '@/component/molecules/TopHeadline'
 import { getPostMetadata, getProjectMetadata, skills } from '@/utils'
 import Image from 'next/image'
+import GetInTouch from '@/component/molecules/GetInTouch'
 
 export default function Home() {
   const posts = getPostMetadata()
@@ -27,7 +28,7 @@ export default function Home() {
       <section className='mt-10 md:mt-20'>
         <h4 className='text-white'>Featured Project</h4>
         <div className='mt-5 grid grid-cols-1 md:grid-cols-2 gap-5'>
-          <FeaturedProject projects={projects}/>
+          <FeaturedProject projects={projects} />
         </div>
       </section>
 
@@ -54,6 +55,15 @@ export default function Home() {
         <h4 className='text-white'>Writing</h4>
         <div className='mt-4'>
           <Blogs posts={posts} />
+        </div>
+      </section>
+
+      <section className='mt-10 md:mt-20'>
+        <h4 className='text-white text-center text-xl font-medium'>
+          Get In Touch
+        </h4>
+        <div className='mt-8 max-w-[400px] mx-auto'>
+          <GetInTouch />
         </div>
       </section>
     </>

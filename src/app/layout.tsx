@@ -1,3 +1,4 @@
+import Footer from '@/component/molecules/Footer'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +16,10 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang='en' className={inter.className}>
-      <body className='container max-w-[800px] pb-12'>{children}</body>
+      <body className='container max-w-[800px]'>
+        {children}
+        <Footer/>
+      </body>
     </html>
   )
 }
