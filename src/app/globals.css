@@ -6,4 +6,28 @@
   body {
     @apply bg-[#1c1c25];
   }
+  .project {
+    @apply bg-[#21212C] duration-75 ease-in rounded-lg relative h-[280px] overflow-hidden;
+  }
+  .project:hover {
+    @apply hover:bg-[#4E4EE9];
+  }
+  .project__desc {
+    @apply absolute z-10 left-6 bottom-6 bg-[#313141] rounded-md h-14 px-6 text-white flex items-center;
+  }
+  .project:hover .project__desc {
+    @apply text-[#1C1C25] bg-white shadow-lg;
+  }
+  .project__thumbnail {
+    @apply absolute top-6 left-24 rounded-lg duration-200 ease-in object-cover object-left-top h-[300px] w-[500px];
+  }
+  .project:hover .project__thumbnail {
+    @apply left-10;
+  }
+  .project__layer {
+    @apply h-full w-full bg-[#21212C]/50 absolute z-10 duration-75 ease-in;
+  }
+  .project:hover .project__layer {
+    @apply bg-transparent
+  }
 }

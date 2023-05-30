@@ -1,11 +1,15 @@
 import Blogs from '@/component/atoms/Blogs'
 import Skill from '@/component/atoms/Skill'
 import TopHeadline from '@/component/molecules/TopHeadline'
-import { getPostMetadata, skills } from '@/utils'
+import { getPostMetadata, getProjectMetadata, skills } from '@/utils'
 import Image from 'next/image'
 
 export default function Home() {
   const posts = getPostMetadata()
+  const projects = getProjectMetadata()
+
+  console.log(projects)
+
   return (
     <>
       <section className='mt-10'>
@@ -23,11 +27,26 @@ export default function Home() {
 
       <section className='mt-10 md:mt-20'>
         <h4 className='text-white'>Featured Project</h4>
+        <div className='mt-5 grid grid-cols-1 md:grid-cols-2 gap-5'>
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className='project'
+            >
+              <div className='project__layer' />
+              <img src={project.thumbnail} className='project__thumbnail'/>
+              
+              <div className='project__desc'>
+                {project.title}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className='mt-10 md:mt-20'>
         <h4 className='text-white'>Stack</h4>
-        <div className='mt-4 flex gap-8 items-center flex-wrap justify-between md:justify-start'>
+        <div className='mt-4 flex gap-6 md:gap-0 flex-wrap justify-between'>
           {skills.map((skill, index) => (
             <Skill key={index}>
               <Image

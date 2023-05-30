@@ -12,11 +12,16 @@ import tailwindIcon from 'public/icon/tailwind.svg'
 import reduxIcon from 'public/icon/redux.svg'
 import graphqlIcon from 'public/icon/graphql.svg'
 import jsIcon from 'public/icon/js.svg'
+import { project } from '@/models/projects'
+
+function getFileDir(dir: string) {
+  const folder = dir + '/'
+  const files = fs.readdirSync(folder)
+  return files.filter((file) => file.endsWith('.md'))
+}
 
 function getPostMetadata(): posts[] {
-  const folder = 'posts/'
-  const files = fs.readdirSync(folder)
-  const markdownPosts = files.filter((file) => file.endsWith('.md'))
+  const markdownPosts = getFileDir('posts')
 
   const posts = markdownPosts.map((fileName) => {
     const fileContents = fs.readFileSync(`posts/${fileName}`, 'utf8')
@@ -31,6 +36,27 @@ function getPostMetadata(): posts[] {
   })
 
   return posts
+}
+
+function getProjectMetadata(): project[] {
+  const markdownProject = getFileDir('projects/')
+
+  const projects = markdownProject.map((fileName) => {
+    const fileContents = fs.readFileSync(`projects/${fileName}`, 'utf8')
+    const matterResult = matter(fileContents)
+    return {
+      title: matterResult.data.title,
+      subtitle: matterResult.data.subtitle,
+      endDate: matterResult.data.endDate,
+      startDate: matterResult.data.startDate,
+      slug: fileName.replace('.md', ''),
+      thumbnail: matterResult.data.thumbnail,
+      stack: matterResult.data.stack,
+      isFeatured: matterResult.data.isFeatured,
+    }
+  })
+
+  return projects
 }
 
 const skills = [
@@ -53,7 +79,20 @@ function formatDate(dateString: string) {
   let month = date[1]
   let day = date[2]
 
-  let months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ]
+  let months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ]
 
   let monthName = months[parseInt(month) - 1]
 
@@ -61,4 +100,4 @@ function formatDate(dateString: string) {
   return formattedDate
 }
 
-export { getPostMetadata, skills, formatDate }
+export { getPostMetadata, getProjectMetadata, skills, formatDate }
