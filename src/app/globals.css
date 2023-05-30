@@ -32,7 +32,7 @@
   }
 
   .latest-project {
-    @apply bg-[#21212C] w-full h-20 md:h-28 rounded-lg overflow-hidden flex gap-4 border-2 border-[#21212C] hover:border-[#4E4EE9];
+    @apply bg-[#21212C] w-full h-24 md:h-28 rounded-lg overflow-hidden flex gap-4 border-2 border-[#21212C] hover:border-[#4E4EE9];
   }
 
   .latest-project__image {
@@ -52,7 +52,7 @@
   }
 
   .latest-project__image__src {
-    @apply absolute top-10 left-1/2 -translate-x-1/2 rounded-md w-[80%] duration-150 ease-in;
+    @apply absolute top-8 md:top-10 left-1/2 -translate-x-1/2 rounded-md w-[80%] duration-150 ease-in;
   }
 
   .latest-project:hover .latest-project__image .latest-project__image__src {

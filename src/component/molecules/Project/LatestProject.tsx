@@ -15,7 +15,7 @@ export default function LatestProject({ projects }: Props) {
             <div className='latest-project__image__layer' />
             <img src={p.thumbnail} className='latest-project__image__src' />
           </div>
-          <div className='flex items-center justify-between w-full pr-4 gap-3'>
+          <div className='flex items-center justify-between w-full pr-4 md:pr-6 gap-3'>
             <div>
               {p.status !== 'published' ? (
                 <>
