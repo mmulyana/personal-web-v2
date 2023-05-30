@@ -38,7 +38,7 @@ export default function Home() {
 
       <section className='mt-10 md:mt-20'>
         <h4 className='text-white'>Stack</h4>
-        <div className='mt-4 flex gap-6 md:gap-0 flex-wrap justify-between'>
+        <div className='mt-4 flex gap-3 md:gap-0 flex-wrap justify-start md:justify-between'>
           {skills.map((skill, index) => (
             <Skill key={index}>
               <Image
