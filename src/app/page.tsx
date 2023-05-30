@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='mt-10 md:mt-20'>
+      <section className='mt-12 md:mt-20'>
         <h4 className='text-white'>Writing</h4>
         <div className='mt-4'>
           <Blogs posts={posts} />
