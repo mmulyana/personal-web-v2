@@ -56,6 +56,6 @@
   }
 
   .latest-project:hover .latest-project__image .latest-project__image__src {
-    @apply top-6;
+    @apply top-4 md:top-6;
   }
 }

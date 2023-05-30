@@ -20,9 +20,7 @@ export default function Home() {
           <span className='text-white/40'>Frontend Developer</span>
         </h1>
         <p className='text-white/80 max-w-[610px] mt-6 text-sm'>
-          Junior front-end developer based in Indonesia specializing in crafting
-          highly responsive and visually appealing user interfaces for seamless
-          user experiences.
+          Junior front-end developer based in Indonesia
         </p>
       </section>
 
