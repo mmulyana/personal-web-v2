@@ -9,8 +9,6 @@ export default function Home() {
   const posts = getPostMetadata()
   const projects = getProjectMetadata()
 
-  console.log(projects)
-
   return (
     <>
       <section className='mt-10'>
@@ -31,6 +29,10 @@ export default function Home() {
         <div className='mt-5 grid grid-cols-1 md:grid-cols-2 gap-5'>
           <FeaturedProject projects={projects}/>
         </div>
+      </section>
+
+      <section className='mt-10 md:mt-20'>
+        <h4 className='text-white'>Latest Project</h4>
       </section>
 
       <section className='mt-10 md:mt-20'>

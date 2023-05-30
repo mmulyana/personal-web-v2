@@ -6,9 +6,9 @@ import { MdEmail } from 'react-icons/md'
 
 export default function TopHeadline() {
   return (
-    <div className='flex items-center justify-between'>
+    <div className='flex items-start md:items-center justify-between flex-col md:flex-row'>
       <Signal text='Available for internship' type='primary' ping />
-      <div className='flex items-center gap-4'>
+      <div className='mt-10 md:mt-0 flex items-center gap-4 w-full md:w-fit justify-start'>
         {links.map((link, index) => (
           <LinkSocial key={index} href={link.href}>
             <>{link.icon}</>
