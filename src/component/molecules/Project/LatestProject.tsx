@@ -41,7 +41,7 @@ export default function LatestProject({ projects }: Props) {
             <div>
               <Link
                 target='__blank'
-                href='/'
+                href={p.href}
                 className='text-xs px-3 py-2 rounded-lg border border-white/20 text-white hover:text-[#191921] hover:bg-white font-medium'
               >
                 View
