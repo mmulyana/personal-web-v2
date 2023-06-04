@@ -11,6 +11,7 @@ import LatestProject from '@/component/molecules/Project/LatestProject'
 export default function Home() {
   const posts = getPostMetadata()
   const projects = getProjectMetadata()
+
   return (
     <>
       <section className='mt-10'>
@@ -59,8 +60,12 @@ export default function Home() {
 
       <section className='mt-12 md:mt-20'>
         <h4 className='text-white'>Writing</h4>
-        <div className='mt-4'>
-          <Blogs posts={posts} />
+        <div className='mt-4 flex flex-col gap-3'>
+          <Blogs
+            posts={posts
+              .slice(0, 5)
+              .sort((item1, item2) => (item1.date > item2.date ? -1 : 1))}
+          />
         </div>
       </section>
 
