@@ -72,6 +72,7 @@ export default function Home() {
       <section className='mt-10 md:mt-20'>
         <h4 className='text-white text-center text-xl font-medium'>
           Get In Touch
+          
         </h4>
         <div className='mt-8 max-w-[400px] mx-auto'>
           <GetInTouch />
