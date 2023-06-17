@@ -7,7 +7,7 @@
     @apply bg-[#1c1c25];
   }
   .project {
-    @apply bg-[#21212C] duration-75 ease-in rounded-lg relative h-[280px] overflow-hidden;
+    @apply bg-[#21212C] duration-75 ease-in rounded-lg relative h-[280px] overflow-hidden border-2 border-transparent hover:border-[#4E4EE91];
   }
   .project:hover {
     @apply hover:bg-[#4E4EE9];
@@ -56,6 +56,6 @@
   }
 
   .latest-project:hover .latest-project__image .latest-project__image__src {
-    @apply top-4 md:top-6;
+    @apply top-4;
   }
 }
