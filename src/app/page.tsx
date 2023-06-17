@@ -38,7 +38,7 @@ export default function Home() {
         <h4 className='text-white'>Latest Project</h4>
         <div className='mt-5 flex flex-col gap-3'>
           <LatestProject
-            projects={projects.filter((p) => p.isFeatured === false)}
+            projects={projects.sort((item1, item2) => (item1.startDate > item2.startDate ? -1 : 1)).filter((p) => p.isFeatured === false)}
           />
         </div>
       </section>
@@ -72,7 +72,6 @@ export default function Home() {
       <section className='mt-10 md:mt-20'>
         <h4 className='text-white text-center text-xl font-medium'>
           Get In Touch
-          
         </h4>
         <div className='mt-8 max-w-[400px] mx-auto'>
           <GetInTouch />

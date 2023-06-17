@@ -6,7 +6,7 @@ endDate: ''
 thumbnail: 'https://raw.githubusercontent.com/mmulyana/mmulyana.github.io/master/public/thumbnail/bjs.png'
 stack: 'next-js_framer'
 isFeatured: false
-status: 'ongoing'
+status: 'pending'
 href: 'https://barokahjayasemesta.vercel.app'
 repo: ''
 ---
