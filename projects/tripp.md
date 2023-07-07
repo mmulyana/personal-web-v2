@@ -5,8 +5,8 @@ startDate: '2023-06-01'
 endDate: ''
 thumbnail: 'https://raw.githubusercontent.com/mmulyana/mmulyana.github.io/master/public/thumbnail/tripp.png'
 stack: 'next-js_tailwind_node-js_express-js_postgress'
-isFeatured: false
-status: 'ongoing'
-href: 'https://staging-project-binar-5.vercel.app/'
+isFeatured: true
+status: 'published'
+href: 'https://tripp.vercel.app'
 repo: ''
 ---
