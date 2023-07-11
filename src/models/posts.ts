@@ -4,4 +4,5 @@ export interface posts {
   date: string
   slug: string
   thumbnail?: string
+  status?: string
 }

@@ -32,6 +32,7 @@ function getPostMetadata(): posts[] {
       subtitle: matterResult.data.subtitle,
       thumbnail: matterResult.data.subtitle,
       slug: fileName.replace('.md', ''),
+      status: matterResult.data.status,
     }
   })
 
@@ -55,7 +56,7 @@ function getProjectMetadata(): project[] {
       isFeatured: matterResult.data.isFeatured,
       status: matterResult.data.status,
       href: matterResult.data.href,
-      repo: matterResult.data.repo
+      repo: matterResult.data.repo,
     }
   })
 

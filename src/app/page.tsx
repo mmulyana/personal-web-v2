@@ -7,6 +7,7 @@ import Image from 'next/image'
 import GetInTouch from '@/component/molecules/GetInTouch'
 import Link from 'next/link'
 import LatestProject from '@/component/molecules/Project/LatestProject'
+import { posts } from '@/models/posts'
 
 export default function Home() {
   const posts = getPostMetadata()
@@ -64,6 +65,7 @@ export default function Home() {
           <Blogs
             posts={posts
               .slice(0, 5)
+              .filter((d: posts) => d.status === 'published')
               .sort((item1, item2) => (item1.date > item2.date ? -1 : 1))}
           />
         </div>
