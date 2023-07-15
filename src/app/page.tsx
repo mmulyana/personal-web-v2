@@ -65,7 +65,7 @@ export default function Home() {
           <Blogs
             posts={posts
               .slice(0, 5)
-              .filter((d: posts) => d.status === 'published')
+              .filter((d: posts) => d.status === 'published' || 'draft')
               .sort((item1, item2) => (item1.date > item2.date ? -1 : 1))}
           />
         </div>
