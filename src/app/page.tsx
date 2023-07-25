@@ -5,7 +5,6 @@ import TopHeadline from '@/component/molecules/TopHeadline'
 import { getPostMetadata, getProjectMetadata, skills } from '@/utils'
 import Image from 'next/image'
 import GetInTouch from '@/component/molecules/GetInTouch'
-import Link from 'next/link'
 import LatestProject from '@/component/molecules/Project/LatestProject'
 import { posts } from '@/models/posts'
 
