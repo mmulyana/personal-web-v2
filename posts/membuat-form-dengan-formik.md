@@ -51,10 +51,10 @@ kita import terlebih dahulu `Formik` di dalam komponen yang membutuhkan form
 import { Formik, Form, Field } from 'formik'
 ```
 
-kemudian kita terapkan di dalam komponennya, disini kita akan menerapkan formik ke dalam komponen bernama `<FormBox/>`
+kemudian kita terapkan di dalam komponennya, disini kita akan menerapkan formik ke dalam komponen `<App/>`
 
 ```javascript
-export default function FormBox() {
+export default function App() {
     function handleSubmit(values) {
         console.log(values)
     }
