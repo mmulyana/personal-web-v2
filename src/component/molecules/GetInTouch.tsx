@@ -133,7 +133,7 @@ export default function GetInTouch() {
                         fill='currentFill'
                       />
                     </svg>
-                    <span className='sr-only'>Loading...</span>
+                    <span className='sr-only'>Loading..</span>
                   </div>
                 ) : null}
                 <p className='mt-1'>Send</p>
