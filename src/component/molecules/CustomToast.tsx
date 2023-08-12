@@ -1,8 +1,4 @@
-type Props = {
-  toastProps?: any
-  closeToast?: () => any
-}
-function CustomToast({ toastProps, closeToast }: Props) {
+function CustomToast() {
   return (
     <div className='flex'>
       <div className="text-green-300">
