@@ -21,7 +21,7 @@ function CustomToast({ toastProps, closeToast }: Props) {
       </div>
       <div className="ml-2">
       <p className="text-green-600">Message sent</p>
-      <p className="text-white/50 mt-1 text-sm">I've received your message. I'll be in touch soon!</p>
+      <p className="text-white/50 mt-1 text-sm">I&apos;ve received your message. I&apos;ll be in touch soon!</p>
       </div>
     </div>
   )
