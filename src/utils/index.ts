@@ -21,10 +21,10 @@ function getFileDir(dir: string) {
 }
 
 function getPostMetadata(): posts[] {
-  const markdownPosts = getFileDir('posts')
+  const markdownPosts = getFileDir('data/posts')
 
   const posts = markdownPosts.map((fileName) => {
-    const fileContents = fs.readFileSync(`posts/${fileName}`, 'utf8')
+    const fileContents = fs.readFileSync(`data/posts/${fileName}`, 'utf8')
     const matterResult = matter(fileContents)
     return {
       title: matterResult.data.title,
@@ -40,10 +40,10 @@ function getPostMetadata(): posts[] {
 }
 
 function getProjectMetadata(): project[] {
-  const markdownProject = getFileDir('projects/')
+  const markdownProject = getFileDir('data/projects/')
 
   const projects = markdownProject.map((fileName) => {
-    const fileContents = fs.readFileSync(`projects/${fileName}`, 'utf8')
+    const fileContents = fs.readFileSync(`data/projects/${fileName}`, 'utf8')
     const matterResult = matter(fileContents)
     return {
       title: matterResult.data.title,

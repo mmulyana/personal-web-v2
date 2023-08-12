@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Props) {
     <html lang='en' className={inter.className}>
       <body className='container max-w-[800px]'>
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   )

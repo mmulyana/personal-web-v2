@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { BiChevronLeft } from 'react-icons/bi'
 
 const getPostContent = (slug: string) => {
-  const folder = 'posts/'
+  const folder = 'data/posts/'
   const file = `${folder}${slug}.md`
   const content = fs.readFileSync(file, 'utf8')
   const matterResult = matter(content)
