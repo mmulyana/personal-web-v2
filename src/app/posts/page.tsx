@@ -1,4 +1,4 @@
-import Blogs from '@/component/molecules/Blogs'
+import Blogs from '@/component/molecules/posts'
 import { posts } from '@/models/posts'
 import { getPostMetadata } from '@/utils'
 import Link from 'next/link'

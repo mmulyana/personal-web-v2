@@ -1,4 +1,4 @@
-import Blogs from '@/component/molecules/Blogs'
+import Blogs from '@/component/molecules/posts'
 import FeaturedProject from '@/component/molecules/Project/FeaturedProject'
 import Skill from '@/component/atoms/Skill'
 import TopHeadline from '@/component/molecules/TopHeadline'
@@ -66,7 +66,7 @@ export default function Home() {
       <section className='mt-12 md:mt-20'>
         <div className='flex justify-between'>
           <h4 className='text-white'>Writing</h4>
-          <Link href='/blogs' className='text-white text-sm'>
+          <Link href='/posts' className='text-white text-sm'>
             see all
           </Link>
         </div>
