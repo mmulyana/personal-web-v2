@@ -7,6 +7,7 @@ import Image from 'next/image'
 import GetInTouch from '@/component/molecules/GetInTouch'
 import LatestProject from '@/component/molecules/Project/LatestProject'
 import { posts } from '@/models/posts'
+import Link from 'next/link'
 
 export default function Home() {
   const posts = getPostMetadata()
@@ -38,7 +39,11 @@ export default function Home() {
         <h4 className='text-white'>Latest Project</h4>
         <div className='mt-5 flex flex-col gap-3'>
           <LatestProject
-            projects={projects.sort((item1, item2) => (item1.startDate > item2.startDate ? -1 : 1)).filter((p) => p.isFeatured === false)}
+            projects={projects
+              .sort((item1, item2) =>
+                item1.startDate > item2.startDate ? -1 : 1
+              )
+              .filter((p) => p.isFeatured === false)}
           />
         </div>
       </section>
@@ -59,12 +64,17 @@ export default function Home() {
       </section>
 
       <section className='mt-12 md:mt-20'>
-        <h4 className='text-white'>Writing</h4>
+        <div className='flex justify-between'>
+          <h4 className='text-white'>Writing</h4>
+          <Link href='/blogs' className='text-white text-sm'>
+            see all
+          </Link>
+        </div>
         <div className='mt-4 flex flex-col gap-3'>
           <Blogs
             posts={posts
               .slice(0, 5)
-              .filter((d: posts) => d.status === 'published' || 'draft')
+              .filter((d: posts) => d.status === 'published')
               .sort((item1, item2) => (item1.date > item2.date ? -1 : 1))}
           />
         </div>

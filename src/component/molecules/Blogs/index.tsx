@@ -14,7 +14,7 @@ export default function Blogs({posts}: Props) {
           key={index}
           className='text-white p-4 rounded-xl bg-[#21212C] border-2 border-transparent hover:border-blue-700 relative'
         >
-          <Link href={`post/${post.slug}`} className='capitalize'>
+          <Link href={`blog/${post.slug}`} className='capitalize'>
             {post.title}
           </Link>
           <p className='mt-2 text-white/60 font-light text-sm'>

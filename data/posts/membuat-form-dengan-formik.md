@@ -4,7 +4,6 @@ subtitle: 'Formik adalah library populer untuk mengelola state dan validasi form
 date: '2023-06-04'
 status: 'published'
 ---
-
 Dulu jika ingin membuat sebuah controlled form, kita dapat menggunakan hook `useState`. Masalah muncul saat sebuah form membutuhkan banyak banyak field maka perlu dibuat beberapa state sekaligus, untuk menghandle state yang kompleks dapat diselesaikan dengan `useReducer` tapi perlu diingat untuk menggunakan hook ini perlu inisial state dan fungsi reducernya, disinilah `formik` dapat membantu pekerjaan kita
 
 ### Output setelah membaca ini
@@ -19,48 +18,40 @@ Dulu jika ingin membuat sebuah controlled form, kita dapat menggunakan hook `use
 
 pertama mari kita buat proyek react dengan vite menggunakan terminal, nama proyek bebas namun dalam tutorial saya buat nama form-with-formik
 
-```bash
-npm create vite form-with-formik -- --template react
-```
+<CodeBlock language="terminal" code="npm create vite form-with-formik -- --template react"/>
 
 lalu kita masuk kedalam direktori **form-with-formik**
 
-```bash
-cd form-with-formik
-```
+<CodeBlock language="terminal" code="cd form-with-formik"/>
 
 kemudian kita install dependency yang dibutuhkan 
 
-```bash
-npm install
-```
+<CodeBlock language="terminal" code="npm install"/>
 
 ### Instalasi Formik
 
 untuk menginstall library formik, sama seperti saat mengintall dependency sebelumnya di terminal
 
-```bash
-npm install formik --save
-```
+<CodeBlock language="terminal" code="npm install formik --save"/>
 
 ### Implementasi formik
 
 kita import terlebih dahulu `Formik` di dalam komponen yang membutuhkan form
 
-```javascript
-import { Formik, Form, Field } from 'formik'
-```
+<CodeBlock language="javascript" title="App.js" code="import { Formik, Form, Field } from 'formik'"/>
 
 kemudian kita terapkan di dalam komponennya, disini kita akan menerapkan formik ke dalam komponen `<App/>`
 
-```javascript
-export default function App() {
+<CodeBlock language="javascript" title="App.js" code={`export default function App() {
     function handleSubmit(values) {
         console.log(values)
     }
     return (
         <Formik
-            initialValues={{ email: '', password: '' }}
+            initialValues={{
+                email: '', 
+                password: ''
+            }}
             onSubmit={handleSubmit}>
             <Form>
                 <Field type="email" name="email" />
@@ -72,7 +63,8 @@ export default function App() {
         </Formik>
     )
 }
-```
+`}
+/>
 
 dalam komponen Formik kemudian kita inisialiasi data yang akan kita kirim saat menekan tombol submit dengan props bernama `initialValues` props ini menerima object dan untuk saat ini kita akan mengirim data berupa email dan password saja.  kemudian props kedua yang kita butuhkan yaitu `onSubmit` pada props ini kita akan isi dengan fungsi bernama `handleSubmit` dimana fungsi ini menerima parameter berupa values, values ini kita dapatkan dari Formik
 

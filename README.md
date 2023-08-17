@@ -1,3 +1,3 @@
 ## Todo
 
-- [ ] migrate to mdx remote
+- [x] migrate to mdx remote
