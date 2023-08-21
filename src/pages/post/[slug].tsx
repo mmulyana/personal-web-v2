@@ -27,7 +27,7 @@ export default function BlogDetail({ note }: Props) {
         >
           <BiChevronLeft />
         </Link>
-        <h1 className='mt-8 text-2xl text-white font-semibold capitalize'>
+        <h1 className='mt-8 mb-4 text-2xl text-white font-semibold capitalize'>
           {note.scope.title}
         </h1>
         <div className='prose prose-invert max-w-[800px]'>

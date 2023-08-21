@@ -15,8 +15,8 @@ type Props = {
 export default function CodeBlock({ code, language, title }: Props) {
   return (
     <div className='rounded-lg overflow-hidden'>
-      <div className='bg-[#1D212A] px-4 py-3'>
-        <p className={['my-0 text-sm', !title ? 'capitalize' : null].join(' ')}>
+      <div className='bg-[#1D212A] px-4 py-2.5'>
+        <p className={['my-0 text-xs', !title ? 'capitalize' : null].join(' ')}>
           {title ?? language}
         </p>
       </div>
