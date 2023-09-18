@@ -8,7 +8,7 @@ type Props = {
 
 export default function Blogs({ posts }: Props) {
   return (
-    <>
+    <div className='mt-4 flex flex-col gap-3'>
       {posts.map((post, index) => (
         <div
           key={index}
@@ -28,6 +28,6 @@ export default function Blogs({ posts }: Props) {
           )}
         </div>
       ))}
-    </>
+    </div>
   )
 }

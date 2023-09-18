@@ -70,14 +70,12 @@ export default function Home() {
             see all
           </Link>
         </div>
-        <div className='mt-4 flex flex-col gap-3'>
-          <Blogs
-            posts={posts
-              .slice(0, 5)
-              .filter((d: posts) => d.status === 'published')
-              .sort((item1, item2) => (item1.date > item2.date ? -1 : 1))}
-          />
-        </div>
+        <Blogs
+          posts={posts
+            .filter((d: posts) => d.status === 'published')
+            .slice(0, 5)
+            .sort((item1, item2) => (item1.date > item2.date ? -1 : 1))}
+        />
       </section>
 
       <section className='mt-10 md:mt-20'>

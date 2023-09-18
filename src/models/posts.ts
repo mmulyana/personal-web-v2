@@ -5,4 +5,10 @@ export interface posts {
   slug: string
   thumbnail?: string
   status?: string
+  tags?: string[]
+}
+
+export interface Itags {
+  name: string
+  isfeatured: boolean
 }

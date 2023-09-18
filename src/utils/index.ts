@@ -33,6 +33,7 @@ function getPostMetadata(): posts[] {
       thumbnail: matterResult.data.subtitle,
       slug: fileName.replace('.md', ''),
       status: matterResult.data.status,
+      tags: matterResult.data.tags
     }
   })
 

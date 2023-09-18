@@ -3,6 +3,7 @@ title: 'membuat form dengan formik'
 subtitle: 'Formik adalah library populer untuk mengelola state dan validasi formik'
 date: '2023-06-04'
 status: 'published'
+tags: ['frontend', 'javascript', 'react']
 ---
 Dulu jika ingin membuat sebuah controlled form, kita dapat menggunakan hook `useState`. Masalah muncul saat sebuah form membutuhkan banyak banyak field maka perlu dibuat beberapa state sekaligus, untuk menghandle state yang kompleks dapat diselesaikan dengan `useReducer` tapi perlu diingat untuk menggunakan hook ini perlu inisial state dan fungsi reducernya, disinilah `formik` dapat membantu pekerjaan kita
 

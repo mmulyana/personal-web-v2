@@ -15,7 +15,19 @@ jika berhasil laravel akan membuat sebuah file dalam app/http/request dengan nam
 
 <CodeBlock language="php" title="StoreProductRequest.php" code={`public function authorize(): bool
 {
-    // jika return true maka tidak perlu di authorize begitu sebaliknya
+    // jika return maka tidak perlu di authorize
     return true;
+}
+`}/>
+
+kemudian tambahkan validasi berdasarkan field yang dibutuhkan, saat ini kita akan menambahkan validasi untuk field name, price, dan qty
+
+<CodeBlock language="php" title="StoreProductRequest.php" code={`public function rules(): array
+{
+    return [
+        'name' => 'required|string|min:2|max:190',
+        'price' => 'required|number',
+        'qty' => 'required|number'
+    ];
 }
 `}/>
