@@ -1,6 +1,7 @@
 import { project } from '@/models/projects'
 import Link from 'next/link'
 import React from 'react'
+import { BsGithub } from 'react-icons/bs'
 
 type Props = {
   projects: project[]
@@ -18,12 +19,9 @@ export default function LatestProject({ projects }: Props) {
           <div className='flex items-center justify-between w-full pr-4 md:pr-6 gap-3'>
             <div>
               <div className='flex gap-2 items-center mb-2'>
-                <Link
-                  href={`/project/${p.slug}`}
-                  className='text-white font-medium block text-sm md:text-base'
-                >
+                <p className='text-white font-medium block text-sm md:text-base'>
                   {p.title}
-                </Link>
+                </p>
                 {p.status === 'ongoing' ? (
                   <>
                     <div className='flex gap-2 items-center'>
@@ -32,7 +30,9 @@ export default function LatestProject({ projects }: Props) {
                           <div className='w-2 h-2 rounded-full bg-amber-500' />
                           <div className='w-2 h-2 rounded-full bg-amber-500 animate-ping absolute' />
                         </div>
-                        <p className='text-white/50 text-xs'>{p.status}</p>
+                        <p className='text-white/80 text-xs capitalize'>
+                          In Progress
+                        </p>
                       </div>
                     </div>
                   </>
@@ -48,15 +48,29 @@ export default function LatestProject({ projects }: Props) {
               <p className='mt-1 text-white/70 font-light text-xs hidden md:block'>
                 {p.subtitle}
               </p>
+              <div className='mt-2.5'>
+                {p.repo !== '' ? (
+                  <Link
+                    href={p.repo}
+                    target='_blank'
+                    className='flex gap-2 items-center'
+                  >
+                    <BsGithub className='text-white' />
+                    <span className='text-white text-xs'>View on GitHub</span>
+                  </Link>
+                ) : null}
+              </div>
             </div>
             <div>
-              <Link
-                target='__blank'
-                href={p.href}
-                className='text-xs px-3 py-2 rounded-lg border border-white/20 text-white hover:text-[#191921] hover:bg-white font-medium'
-              >
-                View
-              </Link>
+              {!p.hideHref ? (
+                <Link
+                  target='__blank'
+                  href={p.href}
+                  className='text-xs px-3 py-2 rounded-lg border border-white/20 text-white hover:text-[#191921] hover:bg-white font-medium'
+                >
+                  View
+                </Link>
+              ) : null}
             </div>
           </div>
         </div>

@@ -58,6 +58,7 @@ function getProjectMetadata(): project[] {
       status: matterResult.data.status,
       href: matterResult.data.href,
       repo: matterResult.data.repo,
+      hideHref: matterResult.data.hideHref
     }
   })
 

@@ -10,4 +10,5 @@ export interface project {
   status: string
   href: string
   repo: string
+  hideHref: boolean
 }
