@@ -37,8 +37,8 @@ export default function Works() {
   const [data] = useState(local)
   return (
     <>
-      {data.map((data) => (
-        <div className='w-full text-white flex justify-between'>
+      {data.map((data, index) => (
+        <div key={index} className='w-full text-white flex justify-between'>
           <div>
             <p className='font-medium'>{data.name}</p>
             <div className='flex gap-1.5 text-sm items-center'>
