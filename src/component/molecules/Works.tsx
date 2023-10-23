@@ -11,7 +11,7 @@ const local = [
     status: 'Intern',
   },
   {
-    name: 'Black wolf tech id',
+    name: 'Black wolf tech Indonesia',
     role: 'Frontend Developer',
     time: 'Aug - Oct 2023',
     mos: '2 mos',
@@ -25,7 +25,7 @@ const local = [
     status: 'Freelance',
   },
   {
-    name: 'Wesafe.id',
+    name: 'Wesafe',
     role: 'Frontend Developer',
     time: 'Jun - Oct 2023',
     mos: '4 mos',
