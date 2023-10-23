@@ -8,6 +8,7 @@ import GetInTouch from '@/component/molecules/GetInTouch'
 import LatestProject from '@/component/molecules/Project/LatestProject'
 import { posts } from '@/models/posts'
 import Link from 'next/link'
+import Works from '@/component/molecules/Works'
 
 export default function Home() {
   const posts = getPostMetadata()
@@ -26,6 +27,13 @@ export default function Home() {
           frontend development, using React.js, Next.js, typescript. and final
           year student at Ahmad Dahlan University
         </p>
+      </section>
+
+      <section className='mt-10 md:mt-20'>
+        <h4 className='text-white'>Experience</h4>
+        <div className='mt-4 flex gap-6 flex-col'>
+          <Works />
+        </div>
       </section>
 
       <section className='mt-10 md:mt-20'>
