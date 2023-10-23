@@ -22,7 +22,9 @@ export default function Home() {
           <span className='text-white/40'>Frontend Developer</span>
         </h1>
         <p className='text-white/80 max-w-[610px] mt-6 text-sm'>
-          Junior front-end developer based in Indonesia
+          A junior software engineer based in Yogyakarta, I specialize in
+          frontend development, using React.js, Next.js, typescript. and final
+          year student at Ahmad Dahlan University
         </p>
       </section>
 
