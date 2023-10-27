@@ -27,7 +27,7 @@ const local = [
   {
     name: 'Wesafe',
     role: 'Frontend Developer',
-    time: 'Jun - Oct 2023',
+    time: 'Jun - Oct 2022',
     mos: '4 mos',
     status: 'Volunteer',
   },
