@@ -13,8 +13,8 @@ const local = [
   {
     name: 'Black wolf tech Indonesia',
     role: 'Frontend Developer',
-    time: 'Aug - Oct 2023',
-    mos: '2 mos',
+    time: 'Aug - Nov 2023',
+    mos: '4 mos',
     status: 'Freelance',
   },
   {
